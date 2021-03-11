@@ -1,12 +1,24 @@
 window.onload = () => {
 
+    let divContainer = document.createElement('div');
+    divContainer.id = 'divContainer';
+    divContainer.className = 'container';
+    document.body.appendChild(divContainer);    
+    
+    let divRow = document.createElement('div');
+    divRow.id = 'divRow';
+    divRow.className = 'row';
+    divContainer.appendChild(divRow);
+
+    let firstDiv = document.createElement('div');
+    firstDiv.id = 'firstDiv';
+    firstDiv.className = 'col-md-6';
+    divRow.appendChild(firstDiv);
+
     let form = document.createElement('form');
     form.id = 'solForm';
     form.className = 'row g-3';
     form.style = 'background-color : mediumaquamarine;border-radius: 10px;';
-    
-
-    let firstDiv = document.querySelector("#firstDiv");
     firstDiv.appendChild(form);
 
     let solForm = document.querySelector("#solForm");
@@ -107,9 +119,11 @@ window.onload = () => {
     divButton.appendChild(btnSend);
     solForm.appendChild(divButton);   
 
-
-    let secondDiv = document.querySelector("#secondDiv");
+    let secondDiv = document.createElement('div');
+    secondDiv.id = 'secondDiv';
     secondDiv.style = 'background-color : mediumaquamarine;border-radius: 10px;';
+    secondDiv.className = 'col-md-6';
+    divRow.appendChild(secondDiv);
 
     let ul = document.createElement('ul');
     ul.id = 'ul';
